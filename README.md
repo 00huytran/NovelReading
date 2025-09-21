@@ -16,7 +16,7 @@ BTL App doc truyen:
     
 
     cách chạy app:
-    - cài đặt xampp trước khi sử dụng 
+    - cài đặt xampp/wamp trước khi sử dụng 
     - tạo file tên flatform trong file htdocs
     - tải project về
     - sau khi giải nén, copy hết các file trong file API chép vào file flatform
