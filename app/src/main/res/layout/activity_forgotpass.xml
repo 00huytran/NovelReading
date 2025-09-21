@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Forgotpass"
+    android:backgroundTint="#EDEEF0">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/log_regi_box"
+        android:contextClickable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingTop="30dp">
+
+        <EditText
+            android:id="@+id/editTextTextAccReset"
+            android:layout_width="329dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:ems="10"
+            android:hint="Account"
+            android:inputType="text"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/buttonfindacc"
+                android:layout_width="180dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10sp"
+                android:backgroundTint="@color/button_bgcolor"
+                android:text="Get Account"
+                android:textColorHighlight="#EDEEF0"
+                android:textColorLink="#EDEEF0"
+                android:textSize="20sp" />
+            <Button
+                android:id="@+id/buttonfindaccback"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginBottom="10sp"
+                android:backgroundTint="@color/button_bgcolor"
+                android:text="Back"
+                android:textColorHighlight="#EDEEF0"
+                android:textColorLink="#EDEEF0"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/editTextTextNewPassword1"
+            android:layout_width="329dp"
+            android:layout_height="56dp"
+            android:ems="10"
+            android:hint="New Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextTextReNewPassword"
+            android:layout_width="329dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:ems="10"
+            android:hint="Complete Password"
+            android:inputType="textPassword"
+            android:textSize="24sp" />
+        <Button
+            android:id="@+id/buttonchangePassword"
+            android:layout_width="332dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:backgroundTint="@color/button_bgcolor"
+            android:text="Change password"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="321dp"
+        android:layout_height="135dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.449"
+        tools:ignore="NotSibling">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:src="@drawable/iconlh" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Light Novel Hako"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

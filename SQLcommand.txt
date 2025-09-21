@@ -1,0 +1,74 @@
+--DB: apptruyendb
+-- Tạo bảng truyện
+CREATE TABLE `novel` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `img` text NOT NULL,
+  `author` text NOT NULL,
+  `discription` text NOT NULL,
+  PRIMARY KEY (`ID`)
+);
+-- Tạo bảng tài khoản
+CREATE TABLE `account` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Useracc` varchar(225) NOT NULL,
+  `Email` varchar(225) NOT NULL,
+  `pass` varchar(225) NOT NULL,
+ `otpreset` int(11),
+  PRIMARY KEY (`ID`)
+);
+
+-- Tạo bảng chương
+CREATE TABLE `chapter` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `IDnovel` int(11) NOT NULL,
+  `Name` text NOT NULL,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`IDnovel`) REFERENCES `novel`(`ID`)
+);
+
+-- Tạo bảng bình luận
+CREATE TABLE `comment` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `IDnovel` int(11) NOT NULL,
+  `IDacc` int(11) NOT NULL,
+  `content` text NOT NULL,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`IDnovel`) REFERENCES `novel`(`ID`),
+  FOREIGN KEY (`IDacc`) REFERENCES `account`(`ID`)
+);
+
+
+
+-- Tạo bảng đánh giá
+CREATE TABLE `rate` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `IDnovel` int(11) NOT NULL,
+  `IDacc` int(11) NOT NULL,
+  `rating` float NOT NULL,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`IDnovel`) REFERENCES `novel`(`ID`),
+  FOREIGN KEY (`IDacc`) REFERENCES `account`(`ID`)
+);
+
+-- Tạo bảng lịch sử
+CREATE TABLE `history` (
+  `IDacc` int(11) NOT NULL,
+  `IDnovel` int(11) NOT NULL,
+  `IDchapter` int(11) NOT NULL,
+  `bookmark` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`IDacc`, `IDnovel`, `IDchapter`),
+  FOREIGN KEY (`IDacc`) REFERENCES `account`(`ID`),
+  FOREIGN KEY (`IDnovel`) REFERENCES `novel`(`ID`),
+  FOREIGN KEY (`IDchapter`) REFERENCES `chapter`(`ID`)
+);
+
+-- Tạo bảng trang
+CREATE TABLE `reading` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idchapter` int(11) NOT NULL,
+  `img` text NOT NULL,
+  `textcontent` text NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`idchapter`) REFERENCES `chapter`(`ID`));
+);

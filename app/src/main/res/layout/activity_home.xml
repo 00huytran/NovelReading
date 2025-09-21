@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeAct"
+    android:id="@+id/homelayout"
+    android:scrollbars="vertical"
+    android:backgroundTint="#EDEEF0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginTop="40dp"
+            android:text="Stay trending!"
+            android:textAlignment="center"
+
+            />
+
+        <TextView
+            android:id="@+id/usernamehome"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="16dp"
+            android:text="Username"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtsearch"
+            android:layout_width="314dp"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/radius_card"
+            android:padding="10dp"
+            android:text="Tìm kiếm" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_category"
+        android:layout_width="401dp"
+        android:layout_height="364dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/cardlastseen"/>
+    <LinearLayout
+        android:id="@+id/cardlastseen"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/log_regi_box"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="Continue reading"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lastseenlayout"
+            app:cardCornerRadius="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:textColor="@color/black"
+            android:backgroundTint="#FFFFFF"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txtnovelname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Hiện chưa từng"
+                    android:textSize="18dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:id="@+id/txtchaptername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Xem truyện"/>
+            </LinearLayout>
+                <ImageView
+                     android:layout_marginTop="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/baseline_arrow_right_24_bar"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>
